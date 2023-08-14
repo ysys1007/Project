@@ -4,15 +4,109 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Login</h1>
+    <title>Login</title>
 
-    <form action="/login" method="post">
-        <h3>username</h3> <input name="username" type="text">
-        <h3>password</h3> <input name="password" type="password">
-        <button type="submit">submit</button>
+    <style>
+    body {
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .LoginText {
+      color: midnightblue;
+      font-size: 60px;
+      font-weight: 700;
+      padding: 20px 0;
+    }
+
+    #LoginPage {
+      background-color: white;
+      text-align: center;
+      border-radius: 10px;
+      padding: 100px;
+      max-width: 400px;
+      position: relative;
+      bottom: auto;
+    }
+
+    .field {
+      padding-bottom: 20px;
+    }
+
+    .input {
+      border-radius: 5px;
+      background-color: #e9e9f7;
+      padding: 10px;
+      width: 100%;
+      color: midnightblue;
+      border: 1px solid rgb(34, 34, 100);
+      font-size: 15px;
+    }
+
+    .input:focus-visible {
+      outline: 1px solid rgb(34, 34, 100);
+    }
+
+    .input::placeholder {
+      color: midnightblue;
+      opacity: 0.5;
+      font-size: 20px;
+    }
+
+    label {
+      color: midnightblue;
+      font-size: 14px;
+      font-weight: 800;
+      display: block;
+      padding-bottom: 4px;
+      text-align: start;
+    }
+
+    .submit {
+      background-color: #00509D;
+      margin-top: 20px;
+      font-size: 20px;
+      padding: 15px 20px;
+      height: auto;
+      font-weight: 500;
+      color: white;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .submit:hover {
+      background-color: #003f88;
+    }
+
+
+    </style>
+
+</head>
+
+<body>
+  <div id="LoginPage">
+    <div class="LoginText">✅Login</div>
+    
+    <form action="/login" method="post" class="loginform">
+      <div class="field">
+        <label for="username">Username</label>
+        <input class="input" name="username" type="text" placeholder="Username" id="username">
+      </div>
+    
+      <div class="field">
+        <label for="password">Password</label>
+        <input class="input" name="user_password" type="password" placeholder="Password" id="password">
+      </div>
+      <button type="submit" class="submit">signin</button>
+
+      
     </form>
+  </div>
 </body>
+
+
 </html>

@@ -9,21 +9,19 @@
     <style>
     body {
       background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
     }
+
     </style>
 </head>
 <body>
-    <h1>Success!</h1>
-    <br>
-    <button class="gotoLogin">
-        <a href="/login">go to Login Page</a>
-    </button>
+    <!-- create-post.ejs -->
 
-    <form action="/register" method></form>
+
+    <form action="/create-post" method="post">
+        <input type="text" name="title" placeholder="Title">
+        <textarea name="content" placeholder="Content"></textarea>
+        <button type="submit">Save</button>
+      </form>
+      
 </body>
 </html>
